@@ -1,0 +1,14 @@
+resources:
+- name: concourse-hello
+  type: git
+  source:
+    uri: https://github.com/randomtask1155/concourse-hello.git
+    branch: master
+
+jobs:
+- name: job-hello-world
+  public: true
+  plan:
+  - get: concourse-hello
+  - task: hello-world
+    file: concourse-hello/task_hello_world.yml
