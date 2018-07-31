@@ -3,7 +3,7 @@ resources:
   type: git
   source:
     uri: https://github.com/randomtask1155/concourse-hello.git
-    branch: master
+    branch: param-image-source
 
 jobs:
 - name: job-hello-world
